@@ -5388,6 +5388,12 @@ int platform_get_spkr_prot_snd_device(snd_device_t snd_device)
     }
 }
 
+int platform_set_snd_device_name(snd_device_t snd_device __unused,
+                                 const char * name __unused)
+{
+ return -ENOSYS;
+}
+
 int platform_set_sidetone(struct audio_device *adev,
                           snd_device_t out_snd_device,
                           bool enable,
